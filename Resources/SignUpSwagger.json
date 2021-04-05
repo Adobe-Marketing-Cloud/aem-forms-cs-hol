@@ -1,0 +1,158 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "WKND Forms - Microservices",
+    "contact": {}
+  },
+  "host": "webhooks.mongodb-realm.com",
+  "basePath": "/api/client/v2.0/app/wknd-services-rzhbj/service/WKNDForms/incoming_webhook",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    
+    "/updateProfile": {
+      "patch": {
+        "summary": "Update Profile",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "UpdateProfile",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Profile"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/insertProfile": {
+      "post": {
+        "summary": "Insert Profile",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "InsertProfile",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Profile"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+            
+          }
+        },
+        "security": []
+      }
+    },
+   
+
+    "/getProfile": {
+      "get": {
+        "summary": "Get Profile",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "GetProfile",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema" : {							
+							"$ref" : "#/definitions/Profile"							
+						},
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+   
+    "Profile": {
+      "title": "Profile",
+      "type": "object",
+      "properties": {
+        "memberid": {
+          "type": "string"
+        },
+        "firstname": {
+          "type": "string"
+        },
+        "lastname": {
+          "type": "string"
+        },       
+        "company": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "activity": {
+          "type": "string"
+        },
+       
+        "emergencyContactName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "firstname",
+        "lastname"           
+      ]
+    }
+},	
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}

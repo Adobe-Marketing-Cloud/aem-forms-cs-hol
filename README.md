@@ -23,6 +23,6 @@ The lab content is designed to cater to different industry verticals for AEM For
 
 ## Licensing
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
+See [LICENSE](LICENSE) for more information.
 
 \* = *HOL buildout in-progress* (reach out to jsharma@adobe.com for more info)

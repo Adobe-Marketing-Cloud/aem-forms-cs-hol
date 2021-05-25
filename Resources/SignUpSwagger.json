@@ -18,36 +18,6 @@
   ],
   "paths": {
     
-    "/updateProfile": {
-      "patch": {
-        "summary": "Update Profile",
-        "tags": [
-          "Misc"
-        ],
-        "operationId": "UpdateProfile",
-        "deprecated": false,
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/Profile"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "headers": {}
-          }
-        }
-      }
-    },
     "/insertProfile": {
       "post": {
         "summary": "Insert Profile",
@@ -129,16 +99,12 @@
         "lastname": {
           "type": "string"
         },       
-        "company": {
+        "adventure": {
           "type": "string"
         },
-        "state": {
+        "email": {
           "type": "string"
         },
-        "activity": {
-          "type": "string"
-        },
-       
         "emergencyContactName": {
           "type": "string"
         }
